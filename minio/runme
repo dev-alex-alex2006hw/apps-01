@@ -1,0 +1,12 @@
+for i in $(seq 1 5); do
+    mkdir -p $(pwd)/minio${i}/{export,config}
+
+    docker run -d \
+      --restart always \
+      --name minio-${i} \
+      --volume $(pwd)/minio${i}/config:/root/.minio \
+      --volume $(pwd)/minio${i}/export:/export \
+      minio/minio
+done
+
+curl -H Host:minio-1.pointlook.com http://127.0.0.1

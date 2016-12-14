@@ -1,0 +1,1 @@
+docker run -d --name blog -p 2368:2368 -v `pwd`:/var/lib/ghost ghost

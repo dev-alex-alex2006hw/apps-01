@@ -1,0 +1,3 @@
+[ -f ./.env ] && . ./.env
+
+docker run  --name shell --env PASSWORD=$PASSWORD -d garland/butterfly --login

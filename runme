@@ -1,0 +1,15 @@
+( cd traefik/;./runme )
+( cd ghost/;./runme )
+( cd echo/;./runme )
+( cd shell/;./runme )
+
+sleep 5
+
+echo "checking blog: "
+curl -H Host:blog.pointlook.com http://localhost
+echo
+echo "checking echo: "
+curl -H Host:echo.pointlook.com http://localhost
+echo "checking shell: "
+curl -H Host:shell.pointlook.com http://localhost
+echo
