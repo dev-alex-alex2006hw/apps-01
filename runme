@@ -2,14 +2,22 @@
 ( cd ghost/;./runme )
 ( cd echo/;./runme )
 ( cd shell/;./runme )
+( cd minio/;./runme )
+( cd pl412app/;./runme )
 
 sleep 5
-
 echo "checking blog: "
 curl -H Host:blog.pointlook.com http://localhost
 echo
 echo "checking echo: "
 curl -H Host:echo.pointlook.com http://localhost
+echo
 echo "checking shell: "
 curl -H Host:shell.pointlook.com http://localhost
+echo
+echo "checking s3server: "
+curl -H Host:s3server.pointlook.com http://localhost
+echo
+echo "checking pl412app: "
+curl -H Host:pl412app.pointlook.com http://localhost
 echo

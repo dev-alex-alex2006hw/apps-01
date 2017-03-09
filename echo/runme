@@ -1,1 +1,1 @@
-docker run -d --name echo -p 8080:8080 jmalloc/echo-server
+docker run -d --name echo -p 7000:8080 jmalloc/echo-server

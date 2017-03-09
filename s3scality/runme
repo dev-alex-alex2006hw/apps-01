@@ -1,0 +1,9 @@
+#docker run -d --name s3server \
+#  ­v $(pwd)/data:/usr/src/app/localData -v $(pwd)/metadata:/usr/src/app/localMetadata \
+#  -p 8000:8000 -e ACCESS_KEY=newAccessKey -e SECRET_KEY=newSecretKey scality/s3server
+#
+docker run -d --name s3server \
+ -v $(pwd)/data:/usr/src/app/localData -v $(pwd)/metadata:/usr/src/app/localMetadata \
+ -v $(pwd)/config.json:/usr/src/app/config.json \
+ -p 8000:8000 -e ACCESS_KEY=Dg9dlSXLjwigzBmUP2H2R6TVu9MVL8wM0e4W5mc9tJSjVuOChG7qsDNny0yyFf4Y \
+ -e SECRET_KEY=Jpbtr1DjV39eXsh4IMPplnkzZqQiE9RrNX5Mp6Dj2bU1xDW71JBZWScdhGzXoCmw scality/s3server

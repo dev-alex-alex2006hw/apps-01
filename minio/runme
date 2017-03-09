@@ -1,3 +1,16 @@
+    docker run -d \
+      --restart always \
+      --name s3server \
+      --volume $(pwd)/minio/config:/root/.minio \
+      --volume $(pwd)/minio/export:/export \
+	-e "MINIO_ACCESS_KEY=G3SLLKYCESL1RN70HN94" \
+	-e "MINIO_SECRET_KEY=iIP8oXfLx+aWmWYowyJdwKN4YzFh+GmBOfJcCRcX" \
+	minio/minio server /export
+
+curl -H Host:s3server.pointlook.com http://127.0.0.1
+
+exit 0
+
 for i in $(seq 1 5); do
     mkdir -p $(pwd)/minio${i}/{export,config}
 

@@ -1,0 +1,11 @@
+#docker run -d --name pl412app \
+# -v $(pwd)/myapp:/myapp/ \
+# -e 'APP_MAIN=server.js' -e 'TIME_ZONE=Etc/UCT' \
+# -u 1000 pl-nvm:6.9.5
+
+#docker run -it --rm --name pl412app -v "$PWD"/myapp:/usr/src/app -w /usr/src/app node:6 npm install
+docker run -d --name pl412app -p 3000:3000 -v "$PWD"/myapp:/usr/src/app -w /usr/src/app node:6 npm start
+
+#echo "checking pl412app: "
+#curl -H Host:pl412app.pointlook.com http://localhost
+#echo

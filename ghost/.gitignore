@@ -1,5 +1,5 @@
-apps
+apps/
 config.js
-data
-images
-themes
+data/
+images/
+themes/

@@ -1,0 +1,4 @@
+"regions": {
+     "localregion": ["localhost"],
+     "specifiedregion": ["s3server.pointlook.com"]
+},

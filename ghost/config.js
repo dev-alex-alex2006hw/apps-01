@@ -12,18 +12,16 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://blog.pointlook.com',
-        mail: {},
-        //mail: {
-        //transport: 'SMTP',
-            //options: {
-                //service: 'Mailgun',
-                //auth: {
-                    //user: '',
-                    //pass: ''
-                //}
-            //}
-        //},
-
+        mail: {
+        transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                    user: 'admin@pointlook.com',
+                    pass: 'o3fACXsLsaemJRPiM1Cp'
+                }
+            }
+        },
         database: {
             client: 'sqlite3',
             connection: {
@@ -56,22 +54,16 @@ config = {
         // Visit https://www.w3.org/TR/referrer-policy/ for instructions
         // default 'origin-when-cross-origin',
         // referrerPolicy: 'origin-when-cross-origin',
-
-        // Example mail config
-        // Visit http://support.ghost.org/mail for instructions
-        // ```
-        //  mail: {
-        //      transport: 'SMTP',
-        //      options: {
-        //          service: 'Mailgun',
-        //          auth: {
-        //              user: '', // mailgun username
-        //              pass: ''  // mailgun password
-        //          }
-        //      }
-        //  },
-        // ```
-
+        mail: {
+        transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                    user: 'admin@pointlook.com',
+                    pass: 'o3fACXsLsaemJRPiM1Cp'
+                }
+            }
+        },
         // #### Database
         // Ghost supports sqlite3 (default), MySQL & PostgreSQL
         database: {
