@@ -1,11 +1,21 @@
 ( cd traefik/;./runme )
+#( cd login/;./runme )
+
 ( cd ghost/;./runme )
 ( cd echo/;./runme )
 ( cd shell/;./runme )
 ( cd minio/;./runme )
 ( cd pl412app/;./runme )
 
+<<<<<<< HEAD
 sleep 5
+=======
+sleep 2
+
+#echo "checking login: "
+#curl -H Host:login.pointlook.com http://localhost
+#echo
+>>>>>>> 4a541ef587b20ee5bb2c8d8e7d0151922803f4d4
 echo "checking blog: "
 curl -H Host:blog.pointlook.com http://localhost
 echo
